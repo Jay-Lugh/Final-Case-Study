@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import { RiEdit2Fill } from "react-icons/ri";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Header from "../Component/Header";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Dashboard() {
     //PRODUCT DATA
