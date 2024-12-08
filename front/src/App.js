@@ -6,7 +6,7 @@ import Dashboard from './Page/Dashboard';
 import Selection from './Page/Selection';
 import UserRegistration from './Page/UserRegistration';
 import UserLogin from './Page/UserLogin';
-
+import CheckoutSuccess from './Page/CheckoutSuccess';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/register/admin" element={<Register />} /> {/* Admin Registration */}
         <Route path="/dashboard" element={<Dashboard />} /> {/* Admin Dashboard */}
         <Route path="/register/user" element={<UserRegistration />} />
-        
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
 
       <Route path ="/user" element={<Main/>}></Route>
