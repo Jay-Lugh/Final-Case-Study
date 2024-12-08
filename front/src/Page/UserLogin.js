@@ -10,7 +10,7 @@ function UserLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8000/api/login`, { email, password });
+      const response = await axios.post(`http://127.0.0.1:8000/api/login`, { email, password });
       if (response.data.success) {
         localStorage.setItem('token', response.data.token); // Save the token
         navigate('/user'); // Redirect to User Dashboard
