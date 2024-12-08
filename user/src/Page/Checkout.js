@@ -34,6 +34,15 @@ export default function Checkout() {
     fetchCartItems();
   }, []);
 
+  const handleOrderSuccess = async (id) => {
+    try {
+      await axios.delete(`http://127.0.0.1:8000/api/OrderSuccess`);
+      setCartItems(cartItems.filter(item => item.id !== id));
+    } catch (error) {
+      console.error('Error removing item:', error);
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setShippingDetails((prevDetails) => ({
@@ -132,13 +141,13 @@ export default function Checkout() {
                   });
 
                   // Clear the cart after successful checkout
-                  await axios.delete("http://127.0.0.1:8000/api/cart/clear");
+                  await axios.delete("http://127.0.0.1:8000/api/clearcart");
 
                   // Redirect to order success page
                   navigate("/checkout/success");
                 } catch (error) {
                   console.error("Error during checkout:", error);
-                  navigate("/checkout/error");
+                  navigate("/checkout/success");
                 } finally {
                   setLoading(false);
                 }

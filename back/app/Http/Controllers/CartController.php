@@ -85,7 +85,7 @@ class CartController extends Controller
     }
     
  // Destroy all Carts (Clear the cart)
- public function destroyAll(): JsonResponse
+ public function clearCart(): JsonResponse
  {
      // Delete all Carts
      Cart::query()->delete();

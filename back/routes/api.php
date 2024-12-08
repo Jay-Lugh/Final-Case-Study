@@ -20,4 +20,4 @@ Route::post('/cart', [CartController::class, 'store']);
 Route::get('/cart/{id}', [CartController::class, 'show']);
 Route::put('/cart/{id}', [CartController::class, 'update']);
 Route::delete('/cart/{id}', [CartController::class, 'destroy']);
-Route::delete('/cart/clear', [CartController::class, 'destroyAll']);
+Route::delete('/clearcart', [CartController::class, 'clearCart']);
