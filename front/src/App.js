@@ -10,6 +10,9 @@ import UserLogin from './Page/UserLogin';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Main from './Page/Main';
+import Cart from './Page/Cart';
+import Checkout from './Page/Checkout';
 
 function App() {
   return (
@@ -21,8 +24,13 @@ function App() {
         <Route path="/register/admin" element={<Register />} /> {/* Admin Registration */}
         <Route path="/dashboard" element={<Dashboard />} /> {/* Admin Dashboard */}
         <Route path="/register/user" element={<UserRegistration />} />
+        
 
-        <Route path="/user-dashboard" element={<checkout />} /> {/* User Dashboard */}
+
+      <Route path ="/user" element={<Main/>}></Route>
+      <Route path ="/cart" element={<Cart/>}></Route>
+      <Route path ="/checkout" element={<Checkout/>}></Route>
+
       </Routes>
     </Router>
   );
