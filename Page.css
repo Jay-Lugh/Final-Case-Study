@@ -1,0 +1,244 @@
+/* Login.css */
+
+/* Container Styles */
+.login-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: white; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Form Input Styles */
+  .login-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Button Styles */
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Extra Spacing for buttons */
+  .button-container {
+    margin-top: 15px;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  /* ---------------------------- */
+  
+  /* UserLogin.css */
+  
+  /* Container Styles */
+  .user-login-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Form Input Styles */
+  .user-login-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .user-login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Register Button Styles */
+  .register-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .register-button:hover {
+    background-color: #218838;
+  }
+  
+  /* ---------------------------- */
+  
+  /* UserRegistration.css */
+  
+  /* Container Styles */
+  .user-registration-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: white; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Form Input Styles */
+  .user-registration-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Register Button Styles */
+  .user-registration-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Back to Login Button Styles */
+  .back-to-login-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .back-to-login-button:hover {
+    background-color: #218838;
+  }
+  
+  /* ---------------------------- */
+  
+  /* Register.css */
+  
+  /* Container Styles */
+  .register-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Form Input Styles */
+  .register-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Register Button Styles */
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Back to Login Button Styles */
+  .back-to-login-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .back-to-login-button:hover {
+    background-color: #218838;
+  }
+  
+  /* ---------------------------- */
+  
+  /* Selection.css */
+  
+  /* Container Styles */
+  .selection-container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: white; 
+    border-radius: 8px; 
+    padding: 20px;
+  }
+  
+  /* Title Styles */
+  .selection-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .selection-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .selection-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .selection-button:active {
+    background-color: #004085;
+  }
+  
+  
