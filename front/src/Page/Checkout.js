@@ -14,7 +14,8 @@ export default function Checkout() {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-
+   const [cartItems, setCartItems] = useState([]);
+ const totalPrice = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setShippingDetails((prevDetails) => ({
@@ -22,6 +23,22 @@ export default function Checkout() {
       [name]: value,
     }));
   };
+
+    useEffect(() => {
+    // Fetch cart items from the backend when the component mounts
+    const fetchCartItems = async () => {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/cart');
+        setCartItems(response.data.data);
+      } catch (error) {
+        console.error('Error fetching cart items:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCartItems();
+  }, []);
 
   const handlePaymentChange = (e) => {
     setPaymentMethod(e.target.value);
@@ -141,6 +158,51 @@ export default function Checkout() {
           </Button>
         </div>
       </Form>
+
+              <div
+          style={{
+            flex: 1,
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+            padding: "20px",
+            backgroundColor: "#f9f9f9",
+          }}
+        >
+          <h3>Transaction Receipt</h3>
+          {cartItems.length === 0 ? (
+            <p>Your cart is empty.</p>
+          ) : (
+            <div>
+              {cartItems.map((item, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <span>
+                    {item.name} (x{item.quantity})
+                  </span>
+                  <span>${(item.quantity * item.price).toFixed(2)}</span>
+                </div>
+              ))}
+              <hr />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontWeight: "bold",
+                }}
+              >
+                <span>Total:</span>
+                <span>${totalPrice.toFixed(2)}</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
